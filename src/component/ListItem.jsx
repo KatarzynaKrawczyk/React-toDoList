@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import Button from "./Button";
 
 class ListItem extends React.Component {
@@ -10,7 +10,7 @@ class ListItem extends React.Component {
   }
 
   handleChange = () => {
-    if(!this.state.isEdited){
+    if(!this.state.isEdited) {
       this.props.handleChange();
       this.setState({
         isEdited: true
@@ -19,11 +19,16 @@ class ListItem extends React.Component {
   }
 
   render() {
+  console.log('render');
     return (
-      <li>
-        {this.props.name}
-        <Button handleChange={this.handleChange.bind(this)} text="edit"></Button>
-        <Button text="x"></Button>
+      <li className="d-flex flex-row list-group-item">
+        <div className="mr-auto p-2">
+          {this.props.name}
+        </div>
+        <div className="p-2 btn-group" role="group">
+          <Button type="button" className="btn btn-secondary" handleChange={this.handleChange.bind(this)} text="edit"></Button>
+          <Button type="button" className="btn btn-secondary" text="x"></Button>
+        </div>
       </li>
     )
   }
