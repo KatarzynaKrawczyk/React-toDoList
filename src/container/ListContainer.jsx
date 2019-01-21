@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../component/Button";
 import ListItem from "../component/ListItem";
 
 class ListContainer extends React.Component {
@@ -22,8 +21,22 @@ class ListContainer extends React.Component {
         Zedytowano {this.state.edited} razy
         <ul>
           <ListItem
-            handleChange={this.handleChange.bind(this)}>
-          </ListItem>
+            handleChange={this.handleChange.bind(this)}
+            name="Kasia"
+          />
+          <ListItem
+            handleChange={this.handleChange.bind(this)}
+            name="Jaś"
+          />
+          <ListItem
+            handleChange={this.handleChange.bind(this)}
+            name="Franek"
+          />
+          <ListItem
+            handleChange={this.handleChange.bind(this)}
+            name="Lusia"
+          />
+
         </ul>
     </div>
     );
