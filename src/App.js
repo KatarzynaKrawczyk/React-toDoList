@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <ListContainer name="Kasia1"/>
+        <ListContainer name="KasiaK"/>
       </>
     );
   }
